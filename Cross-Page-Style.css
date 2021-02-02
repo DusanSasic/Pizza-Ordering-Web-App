@@ -1,0 +1,101 @@
+
+
+    * {
+    box-sizing: border-box;
+    }
+
+    body {
+    padding: 150px;
+    background-color: palegoldenrod;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    }
+
+    /* Style the header */
+    header {
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    font-size: 35px;
+    }
+
+    /* Create two columns/boxes that floats next to each other */
+    nav {
+    float: left;
+    width: 30%;
+    background: #ccc;
+    padding: 20px;
+    height:250px;      /*Middle content size (LOGO)*/
+    }
+
+    /* Style the list inside the menu */
+    nav ul {
+    list-style-type: none;
+    padding: 0;
+    }
+
+    article {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color: #f1f1f1;
+    height:250px;  /*Middle content size (AREA)*/
+    }
+
+    /* Clear floats after the columns */
+    section:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+
+    /* Style the footer */
+    footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    }
+
+
+        
+    h3{
+        padding-left: 10px;
+        /*background-color: #b36b00 ;*/
+        border-radius: 4px;
+        background-color: yellowgreen;
+        color: white;
+        font-weight: bold;
+    }
+
+    
+
+    input[type=submit]
+    {
+        /*background-color: #b36b00 ;*/
+        background-color: yellowgreen;
+        font-weight: bold;
+        color: white;
+        font-size: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
+        border: 0px;
+        border-radius: 12px;
+    }
+
+    input[type=button]
+    {
+        /*background-color: #b36b00 ;*/
+        background-color: yellowgreen;
+        font-weight: bold;
+        color: white;
+        font-size: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
+        border: 0px;
+        border-radius: 12px;
+    }
+    
+  

@@ -1,0 +1,115 @@
+<!-- 
+- Project       : Pizza Ordering Web Application 
+- File          : MainPage.html
+- Programmer    : Dusan Sasic
+- Last updated  : 2/1/2021
+- Description   : Main or the first page that launches. On this page, customers must identify 
+                themselves by entering a name. This page is responsible for calling upon the next page.
+-->
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+
+
+
+    <title>SET Pizza Shop</title>
+
+    <link rel="stylesheet" href="Cross-Page-Style.css">
+    </link>
+
+    <script>
+
+        /*
+        Name        : checkName
+        Descripion  : Full name validation function that only allows alphabetical charachters.
+                    : It is assumed that the full name contains two words.
+        */
+        function checkName() {
+            var fullName = document.getElementById("txt_Names").value;
+
+            //Regular expression
+            var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
+
+            if (regName.test(fullName)) 
+            {
+                return true;
+            } 
+            else 
+            {
+                
+                if (fullName.length != 0) 
+                {
+                    document.getElementById("err_NameInput").innerHTML = "'" + fullName + "' is not a valid name.";
+                } 
+                else {
+                    document.getElementById("err_NameInput").innerHTML = "Name box cannot be empty!";
+                }
+
+                setTimeout(ClearFeedback, 2000);
+
+
+            }
+
+
+            return false;
+        }
+
+
+        /*
+        Name        : function ClearFeedback() 
+        Descripion  : Clears out the name textbox element.
+        */
+        function ClearFeedback() 
+        {
+            document.getElementById("err_NameInput").innerHTML = "";
+        }
+
+
+
+    </script>
+
+
+
+</head>
+
+
+<body>
+
+
+
+    <header>
+        <h2>SET PIZZA SHOP</h2>
+    </header>
+
+    <FORM method="GET" action="Create-Order.php" onsubmit="return checkName();">
+
+        <section>
+
+            <nav>
+                <img style="width:100%; height:100%;" src="Media\BigLogo.png" />
+            </nav>
+
+            <article>
+                <h3>Please, enter <u>full</u> name bellow:</h3>
+
+                <input id="txt_Names" name="txt_Names" type="text" size="20" /><br><br><br>
+
+                <p id="err_NameInput" style="vertical-align: bottom; color: red;"></p>
+
+            </article>
+
+        </section>
+
+        <footer>
+            <input type="submit" value="SUBMIT" />
+        </footer>
+
+    </FORM>
+
+</body>
+
+</html>
